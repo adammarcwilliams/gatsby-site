@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  position: relative;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #333; /* dark from theme.js */
+
+  /* font antialiasing */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  /* no blue highlight on buttons */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
+/* give our App some actual height to work with */
+#___gatsby, [data-reactroot] {
+  position: relative;
+  display: block;
+  height: 100%;
+}

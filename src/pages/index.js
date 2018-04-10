@@ -1,23 +1,15 @@
 import React, { Component } from 'react'
-import styled, { ThemeProvider }  from "styled-components";
-import NavLinks from '../components/NavLinks'
-import SocialLinks from '../components/SocialLinks'
+import styled from 'styled-components'
 import TitleCard from '../components/TitleCard'
-import theme from '../utils/theme'
-import '../utils/index.css'
 
 export default class extends Component {
   render () {
     return (
-      <ThemeProvider theme={theme}>
-        <App>
-          <Container> 
-            <TitleCard />
-            <NavLinks />
-            <SocialLinks />
-          </Container> 
-        </App>
-      </ThemeProvider>
+      <App>
+        <Container>
+          <TitleCard />
+        </Container>
+      </App>
     )
   }
 }
