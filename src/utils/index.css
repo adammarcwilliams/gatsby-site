@@ -1,0 +1,28 @@
+/* standard setup */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  
+  user-select: none;
+
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+a {
+  outline: none;
+}
+
+#root {
+position: relative;
+width: 100%;
+height: 100%;
+}
