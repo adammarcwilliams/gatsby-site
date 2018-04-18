@@ -17,5 +17,5 @@ export default ({ children }) => (
 
 const Container = styled.div`
   margin: 0 auto;
-  maxWidth: 1200px;
+  max-Width: 1200px;
 `

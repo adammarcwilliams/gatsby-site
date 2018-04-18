@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import TitleCard from '../components/TitleCard'
+import Visualiser from '../components/Visualiser'
+require('../utils/bootstrap');
 
 export default class extends Component {
   render () {
@@ -8,6 +10,7 @@ export default class extends Component {
       <App>
         <Container>
           <TitleCard />
+          <Visualiser />
         </Container>
       </App>
     )
