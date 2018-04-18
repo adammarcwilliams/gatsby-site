@@ -1,21 +1,34 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import TitleCard from '../components/TitleCard'
-import Visualiser from '../components/Visualiser'
-require('../utils/bootstrap');
+import BackgroundWebGL from '../components/BackgroundWebGL'
+require('../utils/bootstrap')
 
 export default class extends Component {
+  componentDidMount () {
+    console.log('Data:', this.props.data)
+  }
   render () {
     return (
       <App>
         <Container>
           <TitleCard />
-          <Visualiser />
+          <BackgroundWebGL />
         </Container>
       </App>
     )
   }
 }
+
+export const query = graphql`
+  query HomeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
 
 const App = styled.div`
   position: relative;

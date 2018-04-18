@@ -8,7 +8,7 @@ export default class extends Component {
       <NavLinks>
         <StyledLink to='/'>home</StyledLink>
         <StyledLink to='/about/'>about</StyledLink>
-        <StyledLink to='/experiments/'>experiments</StyledLink>
+        <StyledLink to='/blog/'>blog</StyledLink>
       </NavLinks>
     )
   }
@@ -23,6 +23,7 @@ const NavLinks = styled.div`
 `
 
 const StyledLink = styled(Link)`
+  position: relative;
   text-decoration: none;
   text-shadow: none;
   background: none;

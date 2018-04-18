@@ -8,13 +8,16 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^1.9.247",
+    "gatsby": "^1.9.252",
     "gatsby-link": "^1.6.40"
   },
   "devDependencies": {
     "aframe": "^0.8.1",
+    "aframe-react": "^4.4.0",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-source-filesystem": "^1.5.33",
+    "gatsby-transformer-remark": "^1.7.40",
     "standard": "^11.0.1",
     "styled-components": "^3.2.5",
     "typography-theme-elk-glen": "^0.16.9"
