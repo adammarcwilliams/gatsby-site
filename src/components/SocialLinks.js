@@ -7,35 +7,39 @@ import codepen from '../assets/svg/codepen.svg'
 export default class extends Component {
   render () {
     return (
-      <Links>
-        <Link href='https://twitter.com/amwcodes' icon={twitter} />
-        <Link href='https://github.com/adammarcwilliams' icon={github} />
-        <Link href='https://codepen.io/adammarcwilliams' icon={codepen} />
-      </Links>
+      <SocialLinks className='SocialLinks'>
+        <SocialLink className='SocialLink' href='https://twitter.com/amwcodes' icon={twitter} />
+        <SocialLink className='SocialLink' href='https://github.com/adammarcwilliams' icon={github} />
+        <SocialLink className='SocialLink' href='https://codepen.io/adammarcwilliams' icon={codepen} />
+      </SocialLinks>
     )
   }
 }
 
-const Links = styled.div`
-  position: absolute;
-  bottom: 20px;
-  left: 40px;
-  width: 150px;
+const SocialLinks = styled.div`
+  flex: 0 0 auto;
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: flex-start;
   align-items: center;
+  padding: 0 40px;
+  margin-bottom: 20px;
+  white-space: nowrap;
 `
 
-const Link = styled.a`
+const SocialLink = styled.a`
   text-decoration: none;
   text-shadow: none;
   display: inline-block;
   width: 35px;
   height: 35px;
-  background: no-repeat contain center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: url(${props => props.icon});
   color: ${props => props.theme.light};
-
+  margin-right: 20px;
   &:hover {
     opacity: 0.6;
     background-image: url(${props => props.icon});

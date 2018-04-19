@@ -4,9 +4,9 @@ import styled from 'styled-components'
 export default class extends Component {
   render () {
     return (
-      <TitleCard>
+      <TitleCard class='TitleCard'>
         <Name class='name'>Adam Marc Williams</Name>
-        <Role class='role'>Interactive Developer</Role>
+        <Role class='role'>Creative Developer</Role>
         <Company class='company'>@Rhythm Digital</Company>
       </TitleCard>
     )
@@ -21,8 +21,8 @@ const TitleCard = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
   color: ${props => props.theme.light};
-  margin-right: 40px;
   line-height: 30px;
+  white-space: nowrap;
 `
 
 const Name = styled.div`

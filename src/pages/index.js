@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import TitleCard from '../components/TitleCard'
 import BackgroundWebGL from '../components/BackgroundWebGL'
-require('../utils/bootstrap')
+import emmaLouise from '../assets/video/Emma-Louise.mp4'
+import grid from '../assets/images/grid.png'
 
 export default class extends Component {
   componentDidMount () {
@@ -10,12 +11,12 @@ export default class extends Component {
   }
   render () {
     return (
-      <App>
-        <Container>
-          <TitleCard />
-          <BackgroundWebGL />
-        </Container>
-      </App>
+      <Content className='Content'>
+        <Video src={emmaLouise} type='video/mp4' preload='auto' playsInline autoPlay muted loop />
+        <Grid image={grid} />
+        <TitleCard />
+        {/* <BackgroundWebGL /> */}
+      </Content>
     )
   }
 }
@@ -29,23 +30,38 @@ export const query = graphql`
     }
   }
 `
-
-const App = styled.div`
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: ${props => props.theme.dark}
-`
-
-const Container = styled.div`
+const Content = styled.div`
+  flex: 1 1 auto;
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 40px;
   background-color: ${props => props.theme.dark}
+`
+const Video = styled.video`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+`
+const Grid = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC);
+  opacity: 0.3;
+  background-repeat: repeat;
 `

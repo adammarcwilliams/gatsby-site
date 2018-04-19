@@ -20,7 +20,7 @@ html, body {
 }
 
 /* give our App some actual height to work with */
-#___gatsby, [data-reactroot] {
+#___gatsby {
   position: relative;
   display: block;
   height: 100%;

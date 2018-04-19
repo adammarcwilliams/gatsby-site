@@ -5,21 +5,24 @@ import styled from 'styled-components'
 export default class extends Component {
   render () {
     return (
-      <NavLinks>
-        <StyledLink to='/'>home</StyledLink>
-        <StyledLink to='/about/'>about</StyledLink>
-        <StyledLink to='/blog/'>blog</StyledLink>
+      <NavLinks className='NavLinks' >
+        <StyledLink className='NavLink' to='/'>home</StyledLink>
+        <StyledLink className='NavLink' to='/about/'>about</StyledLink>
+        <StyledLink className='NavLink' to='/blog/'>blog</StyledLink>
       </NavLinks>
     )
   }
 }
 
 const NavLinks = styled.div`
-  position: absolute;
-  top: 20px;
-  left: 40px;
+  flex: 0 0 auto;
+  position: relative;
   display: block;
   background: none;
+  padding: 0 40px;
+  margin-top: 20px;
+  z-index: 100;
+  white-space: nowrap;
 `
 
 const StyledLink = styled(Link)`
@@ -28,8 +31,7 @@ const StyledLink = styled(Link)`
   text-shadow: none;
   background: none;
   color: ${props => props.theme.light};
-  font-size: 24px;
-  padding-bottom: 5px;
+  font-size: 24px;;
   margin-right: 20px;
 
   &:hover {
