@@ -27,8 +27,6 @@ const NavLinks = styled.div`
 
 const StyledLink = styled(Link)`
   position: relative;
-  text-decoration: none;
-  text-shadow: none;
   background: none;
   color: ${props => props.theme.light};
   font-size: 24px;;
