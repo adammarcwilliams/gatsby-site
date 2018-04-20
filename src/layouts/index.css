@@ -9,6 +9,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #333; /* dark from theme.js */
+  color: white;
 
   /* font antialiasing */
   -moz-osx-font-smoothing: grayscale;

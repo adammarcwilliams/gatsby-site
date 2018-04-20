@@ -19,8 +19,7 @@ const NavLinks = styled.div`
   position: relative;
   display: block;
   background: none;
-  padding: 0 40px;
-  margin-top: 20px;
+  padding: 20px 40px;
   z-index: 100;
   white-space: nowrap;
 `

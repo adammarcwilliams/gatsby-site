@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Link from "gatsby-link"
+import Link from 'gatsby-link'
 import styled from 'styled-components'
-import { rhythm } from "../utils/typography"
 
 export default class extends Component {
   render () {
@@ -9,26 +8,23 @@ export default class extends Component {
     return (
       <Content className='Content'>
         <div>
-          <h1 display={"inline-block"} borderBottom={"1px solid"}>
+          <h1 style={{ display: 'inline-block', borderBottom: '1px solid' }}>
           Amazing Pandas Eating Things
           </h1>
           <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <Link
-                to={node.fields.slug}
-                css={{ textDecoration: `none`, color: `inherit` }}
-                >
-                <div key={node.id}>
-                  <h3 marginBottom={rhythm(1 / 4)}>
-                    {node.frontmatter.title}{" "}
-                    <span color="#BBB">— {node.frontmatter.date}</span>
-                  </h3>
-                  <p>{node.excerpt}</p>
-                </div>
-              </Link>
-            ))}
-      </div>
-    </Content>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <StyledLink to={node.fields.slug} css={{ color: 'white' }}>
+              <div key={node.id}>
+                <h3>
+                  {node.frontmatter.title}{' '}
+                  <span>— {node.frontmatter.date}</span>
+                </h3>
+                <p>{node.excerpt}</p>
+              </div>
+            </StyledLink>
+          ))}
+        </div>
+      </Content>
     )
   }
 }
@@ -64,4 +60,12 @@ const Content = styled.div`
   height: 100%;
   padding: 0 40px;
   background-color: ${props => props.theme.dark}
+`
+
+const StyledLink = styled(Link)`
+  position: relative;
+  color: ${props => props.theme.light};
+  &:hover {
+    opacity: 0.6;
+  }
 `

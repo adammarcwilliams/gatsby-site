@@ -23,8 +23,7 @@ const SocialLinks = styled.div`
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 40px;
-  margin-bottom: 20px;
+  padding: 20px 40px;
   white-space: nowrap;
 `
 
