@@ -17,11 +17,17 @@ export default class extends Component {
 const NavLinks = styled.div`
   flex: 0 0 auto;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background: none;
   padding: 20px 40px;
   z-index: 100;
   white-space: nowrap;
+  
+  @media (min-width: 700px) {
+    justify-content: flex-start;
+  }
 `
 
 const StyledLink = styled(Link)`

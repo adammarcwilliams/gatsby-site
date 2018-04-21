@@ -12,8 +12,8 @@ export default class extends Component {
   render () {
     return (
       <Content className='Content'>
-        <Video src={emmaLouise} type='video/mp4' preload='auto' playsInline autoPlay muted loop />
-        <Grid image={grid} />
+        {/* <Video src={emmaLouise} type='video/mp4' preload='auto' playsInline autoPlay muted loop />
+        <Grid image={grid} /> */}
         <TitleCard />
         {/* <BackgroundWebGL /> */}
       </Content>

@@ -4,6 +4,7 @@ import NavLinks from '../components/NavLinks'
 import SocialLinks from '../components/SocialLinks'
 import theme from '../utils/theme'
 import './index.css'
+require('prismjs/themes/prism-solarizedlight.css')
 
 export default ({ children }) => (
   <ThemeProvider theme={theme}>

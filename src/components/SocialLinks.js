@@ -21,10 +21,14 @@ const SocialLinks = styled.div`
   position: relative;
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   padding: 20px 40px;
   white-space: nowrap;
+
+  @media (min-width: 700px) {
+    justify-content: flex-start;
+  }
 `
 
 const SocialLink = styled.a`

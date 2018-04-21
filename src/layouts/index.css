@@ -33,3 +33,16 @@ html, body {
 a {
   text-decoration: none;
 }
+
+a:hover {
+  color: white;
+  opacity: 0.6;
+}
+
+a:visited {
+  color: white;
+}
+
+a:-webkit-any-link {
+  color: white;
+}

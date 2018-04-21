@@ -28,13 +28,20 @@ const TitleCard = styled.div`
 const Name = styled.div`
   display: block;
   font-family: ${props => props.theme.headingText};
-  font-size: 30px;
+  font-size: 24px;
   text-transform: uppercase;
+  @media (min-width: 700px) {
+    font-size: 30px;
+  }
 `
 const Role = styled.div`
   display: block;
-  font-size: 24px;
+  font-size: 18px;
   margin-top: 5px;
+  
+  @media (min-width: 700px) {
+    font-size: 24px;
+  }
 `
 const Company = styled.div`
   display: block;

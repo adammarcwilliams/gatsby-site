@@ -61,4 +61,8 @@ const Markdown = styled.div`
       font-size: 24px;
     }
   }
+
+  * {
+    max-width: 100%;
+  }
 `
