@@ -27,9 +27,9 @@ const TitleCard = styled.div`
 
 const Name = styled.div`
   display: block;
-  font-family: 'Oswald';
-  font-weight: 700;
+  font-family: ${props => props.theme.headingText};
   font-size: 30px;
+  text-transform: uppercase;
 `
 const Role = styled.div`
   display: block;
@@ -38,5 +38,4 @@ const Role = styled.div`
 `
 const Company = styled.div`
   display: block;
-  font-size: 20px;
 `

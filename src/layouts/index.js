@@ -20,7 +20,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   max-Width: 1200px;
   margin: 0 auto;
+  font-family: ${props => props.theme.copyText};
+  font-size: 16px;
+
+  @media (min-width: 700px) {
+    font-size: 20px;
+  }
 `

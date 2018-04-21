@@ -10,13 +10,15 @@ module.exports = {
         path: `${__dirname}/src`
       }
     },
-    'gatsby-transformer-remark',
-    // {
-    //   resolve: `gatsby-plugin-typography`,
-    //   options: {
-    //     pathToConfigModule: `src/utils/typography.js`
-    //   }
-    // },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-responsive-iframe`
+        ]
+      }
+    }
   ]
 }

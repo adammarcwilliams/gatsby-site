@@ -5,10 +5,8 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Content className='Content'>
-      <Harness>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Harness>
+      <Title>{post.frontmatter.title}</Title>
+      <Markdown dangerouslySetInnerHTML={{ __html: post.html }} />
     </Content>
   )
 }
@@ -25,20 +23,42 @@ export const query = graphql`
 `
 
 const Content = styled.div`
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   position: relative;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   padding: 0 40px;
-  background-color: ${props => props.theme.dark}
 `
-const Harness = styled.div`
-  flex: 0 0 auto;
+const Title = styled.div`
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: ${props => props.theme.headingText};
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: 700px) {
+    font-size: 30px;
+  }
+`
+
+const Markdown = styled.div`
   position: relative;
   display: block;
   width: 100%;
   height: auto;
+
+  h1 {
+    font-family: ${props => props.theme.headingText};
+    font-size: 18px;
+    text-transform: uppercase;
+
+    @media (min-width: 700px) {
+      font-size: 24px;
+    }
+  }
 `

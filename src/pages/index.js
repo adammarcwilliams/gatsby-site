@@ -31,7 +31,7 @@ export const query = graphql`
   }
 `
 const Content = styled.div`
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -39,7 +39,6 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 40px;
-  background-color: ${props => props.theme.dark}
 `
 const Video = styled.video`
   position: fixed;
